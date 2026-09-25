@@ -4,7 +4,9 @@ import { test, expect } from '@playwright/test'
 // (which has no horizontal overflow) cannot pass the test trivially.
 const cases = [
   { path: '/', ready: '.cm-hero' },
-  { path: '/proyectos', ready: '.cm-grid' }
+  { path: '/proyectos', ready: '.cm-grid' },
+  { path: '/stack', ready: '.cm-stack' },
+  { path: '/sobre-mi', ready: '.cv-sheet' }
 ]
 
 for (const { path, ready } of cases) {

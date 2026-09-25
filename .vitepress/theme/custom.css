@@ -55,6 +55,13 @@
   --cm-copper: #c46a3f;
 }
 
+/* Home page container — keeps hero and content on the same max-width grid */
+.cm-home {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 24px 4rem;
+}
+
 /* Kinetic bronze divider */
 .cm-kinetic-divider {
   height: 3px;
