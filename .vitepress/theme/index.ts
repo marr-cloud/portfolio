@@ -5,6 +5,7 @@ import HeroCreate from './components/HeroCreate.vue'
 import TechChip from './components/TechChip.vue'
 import ProjectCard from './components/ProjectCard.vue'
 import ProjectGrid from './components/ProjectGrid.vue'
+import TechStack from './components/TechStack.vue'
 import '@fontsource/inter/400.css'
 import '@fontsource/inter/600.css'
 import '@fontsource/inter/700.css'
@@ -20,5 +21,6 @@ export default {
     app.component('TechChip', TechChip)
     app.component('ProjectCard', ProjectCard)
     app.component('ProjectGrid', ProjectGrid)
+    app.component('TechStack', TechStack)
   }
 } satisfies Theme
