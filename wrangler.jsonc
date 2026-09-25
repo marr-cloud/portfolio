@@ -1,5 +1,9 @@
 {
+  // Cloudflare merged Pages into Workers; static sites now deploy as a
+  // Workers "Static Assets" project. `wrangler deploy` serves .vitepress/dist.
   "name": "portfolio",
   "compatibility_date": "2026-09-24",
-  "pages_build_output_dir": ".vitepress/dist"
+  "assets": {
+    "directory": ".vitepress/dist"
+  }
 }

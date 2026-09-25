@@ -24,11 +24,17 @@ La página **Sobre mí** tiene un botón *Descargar CV (PDF)* que abre el diálo
 
 ## Deploy
 
-Cloudflare Pages. Configura los secrets `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID` en el repo; cada push a `main` despliega vía GitHub Actions. Manualmente:
+Cloudflare Workers (Static Assets) — Cloudflare fusionó Pages dentro de Workers, y los sitios estáticos se despliegan como un Worker que sirve `.vitepress/dist` (configurado en `wrangler.jsonc`).
+
+**En producción:** <https://portfolio.meitrix8208.workers.dev>
+
+Manualmente:
 
 ```bash
-pnpm build && pnpm exec wrangler pages deploy .vitepress/dist --project-name=portfolio
+pnpm build && pnpm exec wrangler deploy
 ```
+
+Automático: configura los secrets `CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID` en el repo y cada push a `main` despliega vía GitHub Actions (`.github/workflows/deploy.yml`). El `CLOUDFLARE_API_TOKEN` necesita permisos de *Workers Scripts: Edit*.
 
 ## Editar contenido
 
