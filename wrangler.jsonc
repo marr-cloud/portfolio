@@ -6,5 +6,8 @@
   "workers_dev": true,
   "assets": {
     "directory": ".vitepress/dist"
-  }
+  },
+  "routes": [
+    { "pattern": "maurrod.dev", "custom_domain": true }
+  ]
 }
