@@ -8,6 +8,7 @@
     "directory": ".vitepress/dist"
   },
   "routes": [
-    { "pattern": "maurrod.dev", "custom_domain": true }
+    { "pattern": "maurrod.dev", "custom_domain": true },
+    { "pattern": "www.maurrod.dev", "custom_domain": true }
   ]
 }
