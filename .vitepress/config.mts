@@ -1,28 +1,45 @@
 import { defineConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Maurrod dev",
-  description: "Mi portafolio personal",
+  cleanUrls: true,
+  lang: 'es-CO',
+  title: 'Mauricio Rodriguez',
+  description: 'DevOps Engineer — AWS, contenedores y automatización de despliegues.',
+  // Keep planning/spec docs and README out of the built site + search index.
+  srcExclude: ['docs/**', '**/README.md', '.superpowers/**'],
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }],
+    ['meta', { name: 'author', content: 'Mauricio Rodriguez' }]
+  ],
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
-
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+    socialLinks: [{ icon: 'github', link: 'https://github.com/marr-cloud' }],
+    search: { provider: 'local' }
+  },
+  locales: {
+    root: {
+      label: 'Español',
+      lang: 'es-CO',
+      themeConfig: {
+        nav: [
+          { text: 'Inicio', link: '/' },
+          { text: 'Proyectos', link: '/proyectos' },
+          { text: 'Stack', link: '/stack' },
+          { text: 'Sobre mí', link: '/sobre-mi' }
         ]
       }
-    ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    },
+    en: {
+      label: 'English',
+      lang: 'en',
+      link: '/en/',
+      themeConfig: {
+        nav: [
+          { text: 'Home', link: '/en/' },
+          { text: 'Projects', link: '/en/proyectos' },
+          { text: 'Stack', link: '/en/stack' },
+          { text: 'About', link: '/en/sobre-mi' }
+        ]
+      }
+    }
   }
 })
