@@ -62,6 +62,16 @@
   padding: 0 24px 4rem;
 }
 
+/* Home section headings (Proyectos destacados / Certificaciones) — on-theme */
+.cm-home h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 1.25rem;
+  border: 0;
+  padding: 0;
+}
+
 /* Wide, centered container for content pages (Projects/Stack) that use
    layout:page — avoids the empty right-hand aside/outline column of the
    default doc layout, which otherwise leaves a gap and shifts content left. */

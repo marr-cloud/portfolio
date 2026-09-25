@@ -22,7 +22,6 @@ title: Mauricio Rodriguez — DevOps Engineer
 
 ## Certifications
 
-- **AWS Solutions Architect – Associate** (SAA-C03)
-- **AWS Cloud Practitioner** (CLF-C02)
+<CertBadges />
 
 </div>
