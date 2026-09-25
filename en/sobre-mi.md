@@ -4,6 +4,8 @@ title: About
 
 <div class="cv-sheet">
 
+<CvActions label="Download CV (PDF)" />
+
 # Mauricio Rodriguez
 
 **DevOps Engineer** · Barranquilla, Colombia

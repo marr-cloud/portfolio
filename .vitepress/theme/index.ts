@@ -6,12 +6,14 @@ import TechChip from './components/TechChip.vue'
 import ProjectCard from './components/ProjectCard.vue'
 import ProjectGrid from './components/ProjectGrid.vue'
 import TechStack from './components/TechStack.vue'
+import CvActions from './components/CvActions.vue'
 import '@fontsource/inter/400.css'
 import '@fontsource/inter/600.css'
 import '@fontsource/inter/700.css'
 import '@fontsource/jetbrains-mono/400.css'
 import '@fontsource/jetbrains-mono/500.css'
 import './custom.css'
+import './styles/print.css'
 
 export default {
   extends: DefaultTheme,
@@ -22,5 +24,6 @@ export default {
     app.component('ProjectCard', ProjectCard)
     app.component('ProjectGrid', ProjectGrid)
     app.component('TechStack', TechStack)
+    app.component('CvActions', CvActions)
   }
 } satisfies Theme
