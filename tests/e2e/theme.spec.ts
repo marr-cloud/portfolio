@@ -15,3 +15,12 @@ test('bronze accent applies in dark and light modes', async ({ page }) => {
   await page.evaluate(() => document.documentElement.classList.remove('dark'))
   expect((await brand(page)).toLowerCase()).toBe('#a9762f')
 })
+
+test('hero gear does not animate under reduced motion', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' })
+  await page.goto('/')
+  const gear = page.locator('.cm-gear').first()
+  await expect(gear).toBeVisible()
+  const anim = await gear.evaluate((el) => getComputedStyle(el).animationName)
+  expect(anim).toBe('none')
+})
