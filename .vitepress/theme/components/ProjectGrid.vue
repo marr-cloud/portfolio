@@ -30,6 +30,7 @@ const allLabel = computed(() => (isEn.value ? 'all' : 'todos'))
         :key="t"
         class="cm-filter"
         :class="{ 'cm-filter--on': active === t }"
+        :aria-pressed="active === t"
         @click="active = t"
       >{{ t === '*' ? allLabel : t }}</button>
     </div>
