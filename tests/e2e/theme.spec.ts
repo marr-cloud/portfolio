@@ -13,7 +13,7 @@ test('bronze accent applies in dark and light modes', async ({ page }) => {
   expect((await brand(page)).toLowerCase()).toBe('#c8a05a')
   // Force light
   await page.evaluate(() => document.documentElement.classList.remove('dark'))
-  expect((await brand(page)).toLowerCase()).toBe('#a9762f')
+  expect((await brand(page)).toLowerCase()).toBe('#8a5a17')
 })
 
 test('hero gear does not animate under reduced motion', async ({ page }) => {

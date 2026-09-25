@@ -13,10 +13,10 @@
   --vp-c-border: #c9a86f;
   --vp-c-gutter: #d9c69a;
 
-  --vp-c-brand-1: #a9762f;   /* bronze — links/primary text */
-  --vp-c-brand-2: #b0562a;   /* copper — hover */
-  --vp-c-brand-3: #a9762f;   /* button bg */
-  --vp-c-brand-soft: rgba(169, 118, 47, 0.16);
+  --vp-c-brand-1: #8a5a17;   /* bronze — links/primary text (darkened for AA on parchment) */
+  --vp-c-brand-2: #a04a1f;   /* copper — hover */
+  --vp-c-brand-3: #8a5a17;   /* button bg */
+  --vp-c-brand-soft: rgba(138, 90, 23, 0.16);
 
   --cm-brown: #6b4f34;
   --cm-copper: #b0562a;

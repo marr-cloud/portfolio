@@ -20,3 +20,11 @@ test('download button is visible on screen', async ({ page }) => {
   await page.goto('/sobre-mi')
   await expect(page.locator('.cm-cv-btn')).toBeVisible()
 })
+
+test('CV skills render as grouped chips, not a single text blob', async ({ page }) => {
+  await page.goto('/sobre-mi')
+  const groups = page.locator('.cm-skill-group')
+  expect(await groups.count()).toBeGreaterThanOrEqual(5)
+  // each group exposes an icon
+  await expect(page.locator('.cm-skill-group .cm-cat-icon').first()).toBeVisible()
+})

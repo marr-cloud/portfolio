@@ -6,6 +6,8 @@ import TechChip from './components/TechChip.vue'
 import ProjectCard from './components/ProjectCard.vue'
 import ProjectGrid from './components/ProjectGrid.vue'
 import TechStack from './components/TechStack.vue'
+import CategoryIcon from './components/CategoryIcon.vue'
+import CvSkills from './components/CvSkills.vue'
 import CvActions from './components/CvActions.vue'
 import '@fontsource/inter/400.css'
 import '@fontsource/inter/600.css'
@@ -24,6 +26,8 @@ export default {
     app.component('ProjectCard', ProjectCard)
     app.component('ProjectGrid', ProjectGrid)
     app.component('TechStack', TechStack)
+    app.component('CategoryIcon', CategoryIcon)
+    app.component('CvSkills', CvSkills)
     app.component('CvActions', CvActions)
   }
 } satisfies Theme

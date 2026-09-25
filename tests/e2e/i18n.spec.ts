@@ -15,3 +15,9 @@ test('English projects page exists and is localized', async ({ page }) => {
   await expect(page.locator('h1')).toContainText('Projects')
   await expect(page.locator('.cm-grid')).toBeVisible()
 })
+
+test('English stack page has no untranslated Spanish items', async ({ page }) => {
+  await page.goto('/en/stack')
+  const text = await page.locator('.cm-stack').innerText()
+  expect(text).not.toMatch(/multi-entorno|Automatización de infraestructura/i)
+})
