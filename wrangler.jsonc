@@ -3,6 +3,7 @@
   // Workers "Static Assets" project. `wrangler deploy` serves .vitepress/dist.
   "name": "portfolio",
   "compatibility_date": "2026-09-24",
+  "workers_dev": true,
   "assets": {
     "directory": ".vitepress/dist"
   }
