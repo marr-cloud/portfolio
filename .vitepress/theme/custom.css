@@ -62,6 +62,35 @@
   padding: 0 24px 4rem;
 }
 
+/* Wide, centered container for content pages (Projects/Stack) that use
+   layout:page — avoids the empty right-hand aside/outline column of the
+   default doc layout, which otherwise leaves a gap and shifts content left. */
+.cm-page {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 2.5rem 24px 4rem;
+}
+.cm-page > h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+}
+.cm-page > p {
+  color: var(--vp-c-text-2);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 62ch;
+  margin: 0 0 2rem;
+}
+.cm-page > p a {
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 /* Kinetic bronze divider */
 .cm-kinetic-divider {
   height: 3px;

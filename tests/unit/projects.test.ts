@@ -5,10 +5,9 @@ describe('projects data', () => {
   it('has at least 10 curated projects', () => {
     expect(projects.length).toBeGreaterThanOrEqual(10)
   })
-  it('has 5 or 6 featured projects for the home page', () => {
+  it('has 8 featured projects for the home page', () => {
     const featured = projects.filter((p) => p.featured)
-    expect(featured.length).toBeGreaterThanOrEqual(5)
-    expect(featured.length).toBeLessThanOrEqual(6)
+    expect(featured.length).toBe(8)
   })
   it('every project is well-formed', () => {
     for (const p of projects) {

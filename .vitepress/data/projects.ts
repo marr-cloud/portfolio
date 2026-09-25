@@ -55,6 +55,15 @@ export const projects: Project[] = [
     featured: true
   },
   {
+    name: 'aijcriltda',
+    repo: 'https://github.com/marr-cloud/aijcriltda',
+    language: 'Vue',
+    description: 'Sitio web corporativo para Asesorías Integrales Juan Carlos Rodríguez Iglesias Ltda., hecho con Vue/Nuxt y desplegado en Netlify.',
+    description_en: 'Corporate website for Asesorías Integrales Juan Carlos Rodríguez Iglesias Ltda., built with Vue/Nuxt and deployed on Netlify.',
+    tags: ['vue', 'nuxt', 'web'],
+    featured: true
+  },
+  {
     name: 'serve',
     repo: 'https://github.com/marr-cloud/serve',
     language: 'Go',
@@ -79,7 +88,7 @@ export const projects: Project[] = [
     description: 'Probador de cabeceras CORS desplegado como Cloudflare Worker.',
     description_en: 'CORS header tester running as a Cloudflare Worker.',
     tags: ['cloudflare', 'tooling'],
-    featured: false
+    featured: true
   },
   {
     name: 'github-profile-trophy',
@@ -88,7 +97,7 @@ export const projects: Project[] = [
     description: 'Port Nitro vendor-agnostic de github-profile-trophy: desplegable a Cloudflare, Vercel, Deno o Node.',
     description_en: 'Vendor-agnostic Nitro port of github-profile-trophy: deployable to Cloudflare, Vercel, Deno or Node.',
     tags: ['nitro', 'cloudflare'],
-    featured: false
+    featured: true
   },
   {
     name: 'Keycloak-ECS',
