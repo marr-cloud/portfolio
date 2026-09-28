@@ -26,7 +26,7 @@ La página **Sobre mí** tiene un botón *Descargar CV (PDF)* que abre el diálo
 
 Cloudflare Workers (Static Assets) — Cloudflare fusionó Pages dentro de Workers, y los sitios estáticos se despliegan como un Worker que sirve `.vitepress/dist` (configurado en `wrangler.jsonc`).
 
-**En producción:** <https://portfolio.meitrix8208.workers.dev>
+**En producción:** <https://maurrod.dev> (respaldo: <https://portfolio.meitrix8208.workers.dev>)
 
 Manualmente:
 

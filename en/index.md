@@ -6,7 +6,7 @@ title: Mauricio Rodriguez — DevOps Engineer
 <div class="cm-home">
 
 <HeroCreate
-  role="DevOps Engineer · Barranquilla, CO"
+  role="DevOps Engineer · Soledad, CO"
   name="Mauricio Rodriguez"
   tagline="I automate AWS infrastructure and ship containers the way you'd build a factory of gears — every part meshes with the next."
   ctaText="View projects" ctaLink="/en/proyectos"
