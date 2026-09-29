@@ -9,6 +9,21 @@ test('project cards never show a tag that duplicates the language chip', async (
   }
 })
 
+test('tag rows sit at the bottom of every card (consistent alignment)', async ({ page }) => {
+  await page.goto('/proyectos')
+  const gaps = await page.$$eval('.cm-card', (els) =>
+    els.map((el) => {
+      const cardBottom = el.getBoundingClientRect().bottom
+      const tags = el.querySelector('.cm-card__tags')
+      const tagsBottom = tags.getBoundingClientRect().bottom
+      return Math.round(cardBottom - tagsBottom)
+    })
+  )
+  // With tags pinned to the bottom, only the card's bottom padding (~16px)
+  // sits below them — no card should have a large empty gap.
+  for (const g of gaps) expect(g).toBeLessThanOrEqual(24)
+})
+
 test('project filters expose their pressed state to assistive tech', async ({ page }) => {
   await page.goto('/proyectos')
   const first = page.locator('.cm-filter').first()

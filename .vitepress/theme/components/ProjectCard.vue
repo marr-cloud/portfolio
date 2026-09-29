@@ -29,7 +29,9 @@ const extraTags = computed(() =>
 <style scoped>
 .cm-card {
   position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 1.1rem 1.1rem 1rem;
   border: 1px solid var(--vp-c-divider);
   border-left: 3px solid var(--vp-c-brand-1);
@@ -45,7 +47,7 @@ const extraTags = computed(() =>
   width: 8px; height: 8px; border-radius: 50%;
   background: var(--vp-c-brand-1); opacity: 0.6;
 }
-.cm-card__name { font-family: var(--vp-font-family-mono); margin: 0 0 0.4rem; font-size: 1.05rem; color: var(--vp-c-brand-1); }
-.cm-card__desc { margin: 0 0 0.8rem; color: var(--vp-c-text-2); font-size: 0.92rem; line-height: 1.5; }
-.cm-card__tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.cm-card__name { font-family: var(--vp-font-family-mono); margin: 0 0 0.4rem; padding-right: 0.9rem; font-size: 1.05rem; color: var(--vp-c-brand-1); word-break: break-word; }
+.cm-card__desc { margin: 0 0 0.9rem; color: var(--vp-c-text-2); font-size: 0.92rem; line-height: 1.5; }
+.cm-card__tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: auto; }
 </style>
