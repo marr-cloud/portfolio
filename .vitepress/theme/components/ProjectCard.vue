@@ -8,6 +8,10 @@ const props = defineProps<{ project: Project }>()
 const { lang } = useData()
 const isEn = computed(() => lang.value.startsWith('en'))
 const desc = computed(() => (isEn.value ? props.project.description_en : props.project.description))
+// Drop tags that just repeat the language chip (e.g. "Rust" + "rust").
+const extraTags = computed(() =>
+  props.project.tags.filter((t) => t.toLowerCase() !== props.project.language.toLowerCase())
+)
 </script>
 
 <template>
@@ -17,7 +21,7 @@ const desc = computed(() => (isEn.value ? props.project.description_en : props.p
     <p class="cm-card__desc">{{ desc }}</p>
     <div class="cm-card__tags">
       <TechChip :label="project.language" />
-      <TechChip v-for="t in project.tags" :key="t" :label="t" />
+      <TechChip v-for="t in extraTags" :key="t" :label="t" />
     </div>
   </a>
 </template>
